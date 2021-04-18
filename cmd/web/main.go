@@ -62,7 +62,7 @@ func main() {
 	}
 
 	infoLog.Printf("Running at http://localhost%s", *addr)
-	err = srv.ListenAndServe()
+	err = srv.ListenAndServeTLS("./tls/cert.pem", "./tls/key.pem")
 	errorLog.Fatal(err)
 }
 
