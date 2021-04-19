@@ -15,6 +15,10 @@ import (
 	"yogan.dev/snippetbox/pkg/models/mysql"
 )
 
+type contextKey string
+
+const contextKeyIsAuthenticated = contextKey("isAuthenticated")
+
 type application struct {
 	errorLog      *log.Logger
 	infoLog       *log.Logger
